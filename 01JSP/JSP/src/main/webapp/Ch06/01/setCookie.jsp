@@ -16,6 +16,7 @@
 <%
 	Cookie cookie1 = new Cookie ("cookie1","value1");
 	//쿠키의 유지기간(기본값 : -1 (쿠키파일생성 X) , 브라우저가 종료될 때까지 쿠키 유지)	
+	cookie1.setPath("/"); //현재 톰캣 안에 있는 모든 페이지에서 확인 가능
 
 	Cookie cookie2 = new Cookie ("cookie2","value2");
 	cookie2.setMaxAge(60*5); //쿠키 유지기간 설정 60초*5
