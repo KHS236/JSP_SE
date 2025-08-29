@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+
+    <!-- Default set of monitored resources. If one of these changes, the    -->
+    <!-- web application will be reloaded.                                   -->
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+    <WatchedResource>WEB-INF/tomcat-web.xml</WatchedResource>
+    <WatchedResource>${catalina.base}/conf/web.xml</WatchedResource>
+
+	<!-- CONNECTION POOL SETTING(DataSource) -->
+	<!-- name이 바뀌면 다른 곳에서도 다 바뀌어야 한다
+	type 자료형
+	auth 자원을 관리할 곳 톰캣(일반적으로 고정값)
+	maxIdle 최대 노는 커넥션
+	maxWait = 타임아웃 5초 -->
+	<Resource DriverClassname="com.mysql.cj.jdbc.Driver"
+			  url="jdbc:mysql://localhost/opendatadb"
+			  username="root"
+			  password="1234"
+			  name="jdbc/MysqlDB"
+			  type="javax.sql.DataSource"
+			  auth="Container"
+			  maxActive="10"
+			  maxIdle="2" 
+			  maxWait="5000" />
+
+
+
+
+
+</Context>
