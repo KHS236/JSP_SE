@@ -58,7 +58,7 @@ public class DbUtils {
 
 	}
 	public static UserDto selectUser(String username) throws Exception {
-		pstmt = conn.prepareStatement("select * from tbl_user where userid");
+		pstmt = conn.prepareStatement("select * from tbl_user where =?");
 		pstmt.setString(1,  username);
 		rs = pstmt.executeQuery();
 		UserDto dto = null;

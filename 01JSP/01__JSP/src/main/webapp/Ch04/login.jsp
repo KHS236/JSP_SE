@@ -7,15 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-
 	<h1>LOGIN PAGE</h1>
 	<form>
 		USERID : <input type="text" /><br/>
 		PASSWORD : <input type="password" /><br/>
-		<input type="submit" value = "로그인"/>
+		<input type="submit" value="로그인" />
 	</form>
-
-
-
 </body>
 </html>
